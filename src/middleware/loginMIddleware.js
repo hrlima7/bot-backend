@@ -17,5 +17,5 @@ module.exports = (req, res, next) =>{
        
     }
 
-    res.senStatus(401);
+    res.sendStatus(401);
 }

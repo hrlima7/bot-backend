@@ -18,5 +18,8 @@ function doLogin(req, res, next){
 
 }
 
+function doLogout(req, res, next){
+
+}
 
 module.exports = doLogin;

@@ -4,10 +4,10 @@ require("express-async-errors");
 const loginMiddleware = require("./middleware/loginMIddleware")
 const settingsController = require("./controllers/settingsController");
 const doLogin = require("./controllers/loginController");
+const doLogout = require("./controllers/loginController");
 const cors = require("cors");
 const helmet = require("helmet");
 require("express-async-errors");
-
 
 
 const app = express();
@@ -18,7 +18,7 @@ app.use(cors());
 
 app.use(helmet());
 
-app.post('/login', doLogin);
+app.post('/login', doLogin);  
 
 app.get('/settings',loginMiddleware, settingsController.getSettings);
 
@@ -28,5 +28,4 @@ app.use((error,req,res) =>{
 console.error(error);
 })
 
-
-module.exports =app;
+module.exports =app; 
